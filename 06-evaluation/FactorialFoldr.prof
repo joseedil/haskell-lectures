@@ -1,0 +1,29 @@
+	Mon Apr 19 18:42 2021 Time and Allocation Profiling Report  (Final)
+
+	   FactorialFoldr +RTS -p -RTS
+
+	total time  =       35.62 secs   (35622 ticks @ 1000 us, 1 processor)
+	total alloc = 359,454,155,432 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE SRC                             %time %alloc
+
+myFoldr     Main   FactorialFoldr.hs:(4,1)-(5,41)   94.3   99.9
+main        Main   FactorialFoldr.hs:11:1-41         5.7    0.0
+
+
+                                                                                     individual      inherited
+COST CENTRE  MODULE                SRC                            no.     entries  %time %alloc   %time %alloc
+
+MAIN         MAIN                  <built-in>                     117           0    0.0    0.0   100.0  100.0
+ CAF         Main                  <entire-module>                233           0    0.0    0.0    95.4  100.0
+  main       Main                  FactorialFoldr.hs:11:1-41      234           1    1.1    0.0    95.4  100.0
+   factorial Main                  FactorialFoldr.hs:8:1-34       236           1    0.0    0.0    94.3  100.0
+    myFoldr  Main                  FactorialFoldr.hs:(4,1)-(5,41) 237      500001   94.3   99.9    94.3   99.9
+ CAF         GHC.Conc.Signal       <entire-module>                213           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Encoding       <entire-module>                195           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Encoding.Iconv <entire-module>                193           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Handle.FD      <entire-module>                184           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Handle.Text    <entire-module>                182           0    0.0    0.0     0.0    0.0
+ CAF         GHC.Show              <entire-module>                164           0    0.0    0.0     0.0    0.0
+ CAF         GHC.Integer.Type      <entire-module>                129           0    0.0    0.0     0.0    0.0
+ main        Main                  FactorialFoldr.hs:11:1-41      235           0    4.6    0.0     4.6    0.0

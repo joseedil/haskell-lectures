@@ -1,0 +1,9 @@
+programa :: Input1 -> Input2 -> Output
+
+data IO a
+
+data Maybe a = Just a | Nothing
+
+f :: Maybe Int -> Bool
+f (Nothing) = False
+f (Just x)  = True
